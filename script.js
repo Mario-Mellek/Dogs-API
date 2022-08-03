@@ -1,8 +1,10 @@
+//Global variables
 const imageDiv= document.querySelector('img');
 const caption= document.querySelector('figcaption');
 const apiKey= '?api_key=demo';
 const url ='https://api.thedogapi.com/v1/images/search';
 
+//fetching data using async await
 async function getData() {
     const res= await fetch(url+ apiKey);
     try {
@@ -13,16 +15,15 @@ async function getData() {
     }    
 };
 
-
+//space and touch listeners
 document.addEventListener('keypress',(e)=>{
     if (e.code === 'Space'){
         update();
     };
 });
-
 document.addEventListener('touchstart',update)
 
-
+//Updating the DOM after fetching the data
 function update(){
 getData().then(data=>{
     imageDiv.src= data[0].url;
