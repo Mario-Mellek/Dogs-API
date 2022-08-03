@@ -1,6 +1,6 @@
 const imageDiv= document.querySelector('img');
 const caption= document.querySelector('figcaption');
-const apiKey= '?api_key=46129ac8-d41e-428a-95d3-846d79ce1466';
+const apiKey= '?api_key=demo';
 const url ='https://api.thedogapi.com/v1/images/search';
 
 async function getData() {
