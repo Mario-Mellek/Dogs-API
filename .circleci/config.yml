@@ -16,3 +16,6 @@ jobs:
           name: hello
           command: |
             echo "hello-world"
+          name: hello
+          command: |
+            echo "hello-world"
