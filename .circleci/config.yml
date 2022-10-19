@@ -16,6 +16,3 @@ jobs:
           name: hello
           command: |
             echo "hello-world"
-          name: hello2
-          command: |
-            echo "hello-world"
