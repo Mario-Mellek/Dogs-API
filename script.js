@@ -1,7 +1,7 @@
 //Global variables
-const imageDiv = document.querySelector("img");
-const caption = document.querySelector("figcaption");
-const url = "https://dog.ceo/api/breeds/image/random";
+const imageDiv = document.querySelector('img');
+const caption = document.querySelector('figcaption');
+const url = 'https://dog.ceo/api/breeds/image/random';
 
 //fetching data using async await
 async function getData() {
@@ -15,18 +15,18 @@ async function getData() {
 }
 
 //space and touch listeners
-document.addEventListener("keypress", (e) => {
-  if (e.code === "Space") {
+document.addEventListener('keypress', (e) => {
+  if (e.code === 'Space') {
     update();
   }
 });
-document.addEventListener("touchstart", update);
+document.addEventListener('touchstart', update);
 
 //Updating the DOM after fetching the data
 function update() {
   getData().then((data) => {
     imageDiv.src = data.message;
-    imageDiv.alt = "Dog Picture";
+    imageDiv.alt = 'Dog Picture';
   });
 }
 
